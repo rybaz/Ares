@@ -1,4 +1,6 @@
-![Ares](https://vignette.wikia.nocookie.net/godofwar/images/7/78/Gowa-ares.jpg/revision/latest?cb=20130119004526)
+<p align="center">
+  <img width="400" height="318" src="https://www.storynory.com/wp-content/uploads/2017/02/xares-450.jpg.pagespeed.ic.1bEsYlQq-6.jpg">
+</p>
 
 # Ares
 High-impact, high-efficiency password cracking using GPUs in AWS. The best part? It's open-source.
