@@ -1,0 +1,5 @@
+# Install necessary packages to build drivers
+sudo apt-get update && sudo apt-get install hashcat wget gcc make
+
+# POST AMI LAUNCH
+sudo /bin/bash /home/ubuntu/cracking/drivers/NVIDIA-Linux-x86_64-410.72.run --ui=none --no-questions --silent -X && sudo nvidia-smi
