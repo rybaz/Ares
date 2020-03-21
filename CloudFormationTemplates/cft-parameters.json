@@ -1,0 +1,14 @@
+[
+    {
+      "ParameterKey": "paramBucketName",
+      "ParameterValue": "ares-hash-dump"
+    },
+    {
+        "ParameterKey": "snsSubscription",
+        "ParameterValue": "johnthom@cock.li"
+    },
+    {
+        "ParameterKey": "queueName",
+        "ParameterValue": "ares-hash-queue"
+    }
+]
