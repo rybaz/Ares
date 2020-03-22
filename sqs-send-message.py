@@ -3,7 +3,7 @@ import boto3
 sqs = boto3.resource('sqs')
 queue = sqs.get_queue_by_name(QueueName='ares-hash-queue')
 queue_url = "https://sqs.us-east-1.amazonaws.com/175722996601/ares-hash-queue"
-MessageAttrList = ["HashType","Mask"]
+MessageAttrList = ["Hash"]
 MessageAttr = {}
 
 def sendMessage(body, MessageAttributes):
@@ -30,7 +30,7 @@ for attr in MessageAttrList:
     MessageAttr[attr] = {
         'StringValue' : attributeTypeValue,
         'DataType' : 'String'
-    )
+    }
 
 print(MessageAttr)
 
