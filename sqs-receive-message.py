@@ -21,9 +21,7 @@ response = sqs.receive_message(
 message = response['Messages'][0]
 attrs = message['MessageAttributes']
 
-for i in attrs:
-    print(i + ": " + attrs[i]['StringValue'])
-
+print("sudo hashcat -m 0 -a 0 " + attrs['Hash']['StringValue'] + " /home/ubuntu/cracking/wordlists/rockstation.txt")
 
 # choose message to receive
 
