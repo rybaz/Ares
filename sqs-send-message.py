@@ -1,17 +1,12 @@
 import boto3
 
 sqs = boto3.resource('sqs')
-queue = sqs.get_queue_by_name(QueueName='my-dev-queue')
-queue_url = "https://queue.amazonaws.com/456336145658/my-dev-queue"
+queue = sqs.get_queue_by_name(QueueName='ares-hash-queue')
+queue_url = "https://sqs.us-east-1.amazonaws.com/175722996601/ares-hash-queue"
+MessageAttrList = ["Hash"]
 MessageAttr = {}
 
 def sendMessage(body, MessageAttributes):
-    '''
-    body = input("Insert body: ")
-    value1 = input("Insert val1: ")
-    value2 = input("Insert val2: ")
-    value3 = input("Insert val3: ")
-    ''' 
     try:
         response = queue.send_message(
             MessageBody = body,
@@ -27,21 +22,16 @@ def sendMessage(body, MessageAttributes):
     except:
         print("Message Failed to send....")
 
-body = input("Create the message body: ")
+# body = input("Create the message body: ")
 
-while (True):
-    attributeType = input("Insert your Attribute Type: ")
-    attributeTypeValue = input("Insert the corresponding value: ")
-    MessageAttr[attributeType] = {
+for attr in MessageAttrList:
+    # attributeType = input("Insert your Attribute Type: ")
+    attributeTypeValue = input("Insert the corresponding value for " + attr + ": ")
+    MessageAttr[attr] = {
         'StringValue' : attributeTypeValue,
         'DataType' : 'String'
     }
 
-    answer = input("Would you like to add more attributes? Y/N: ")
-
-    if (answer == "N"):
-        break
-
 print(MessageAttr)
 
-sendMessage(body, MessageAttr)
+sendMessage("body", MessageAttr)
