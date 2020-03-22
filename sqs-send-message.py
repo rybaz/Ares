@@ -30,22 +30,8 @@ for attr in MessageAttrList:
     MessageAttr[attr] = {
         'StringValue' : attributeTypeValue,
         'DataType' : 'String'
-    }
+    )
 
-"""
-while (True):
-    attributeType = input("Insert your Attribute Type: ")
-    attributeTypeValue = input("Insert the corresponding value: ")
-    MessageAttr[attributeType] = {
-        'StringValue' : attributeTypeValue,
-        'DataType' : 'String'
-    }
-
-    answer = input("Would you like to add more attributes? Y/N: ")
-
-    if (answer == "N" or answer == "n"):
-        break
-"""
 print(MessageAttr)
 
 sendMessage("body", MessageAttr)
