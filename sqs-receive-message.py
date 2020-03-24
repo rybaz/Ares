@@ -22,6 +22,7 @@ response = sqs.receive_message(
 )
 
 message = response['Messages'][0]
+receipt_handle = message['ReceiptHandle']
 attrs = message['MessageAttributes']
 
 os.system("sudo hashcat -m 0 -a 0 " + attrs['Hash']['StringValue'] + " /home/ubuntu/cracking/wordlists/rockstation.txt -o /home/ubuntu/results.txt")
