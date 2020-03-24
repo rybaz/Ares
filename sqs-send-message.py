@@ -9,10 +9,10 @@ queue_url = "https://sqs.us-east-1.amazonaws.com/175722996601/ares-hash-queue"
 MessageAttrList = ["Hash"]
 MessageAttr = {}
 
-def sendMessage(body, MessageAttributes):
+def sendMessage(MessageAttributes):
     try:
         response = queue.send_message(
-            MessageBody = body,
+            MessageBody = "A Give Hash",
             MessageAttributes = MessageAttributes)
 
         http_code = response['ResponseMetadata']['HTTPStatusCode']
@@ -37,7 +37,7 @@ for attr in MessageAttrList:
 
 print(MessageAttr)
 
-sendMessage("body", MessageAttr)
+sendMessage(MessageAttr)
 
 # Catch Crached Password from S3
 
