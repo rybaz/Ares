@@ -1,4 +1,5 @@
 import boto3
+import os
 
 sqs = boto3.client('sqs')
 
