@@ -22,8 +22,9 @@ response = sqs.receive_message(
 message = response['Messages'][0]
 attrs = message['MessageAttributes']
 
-print("sudo hashcat -m 0 -a 0 " + attrs['Hash']['StringValue'] + " /home/ubuntu/cracking/wordlists/rockstation.txt")
+os.system("sudo hashcat -m 0 -a 0 " + attrs['Hash']['StringValue'] + " /home/ubuntu/cracking/wordlists/rockstation.txt -o /home/ubuntu/s3transvrv/results.txt")
 
 # choose message to receive
+print("os system is done")
 
 # delete message
