@@ -61,6 +61,8 @@ Resources:
       QueueName: !Ref "queueName"
       ReceiveMessageWaitTimeSeconds: 20
 
+  # create IAM Role for EC2/SQS/S3/SNS
+
 Outputs:
   SQSQueue:
     Description: Queue Name

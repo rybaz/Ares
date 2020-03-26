@@ -1,0 +1,29 @@
+Resources:
+  AutoScalingGroup:
+    Type: "AWS::AutoScaling::LaunchConfiguration"
+    Properties:
+      IamInstanceProfile: String # TODO: Create Iam Instance Profile
+      ImageId: String #required
+      InstanceType: String #required
+      LaunchConfigurationName: "Ares Launch Config"
+      PlacementTenancy: default
+      SecurityGroups:
+      - String
+      SpotPrice: String
+      UserData: String
+
+  IAMRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument: Json #required
+      Description: String
+      ManagedPolicyArns:
+      - String
+      MaxSessionDuration: Integer
+      Path: String
+      PermissionsBoundary: String
+      Policies:
+      - Policy
+      RoleName: String
+      Tags:
+      - Tag

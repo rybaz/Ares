@@ -7,6 +7,13 @@ sns = boto3.client('sns')
 
 queue_url = 'https://sqs.us-east-1.amazonaws.com/175722996601/ares-hash-queue'
 
+# send succesfull launch message
+snsNotification = sns.publish(
+    # TODO: Change Static Names to ENVariables
+    TopicArn='arn:aws:sns:us-east-1:175722996601:ares-setup-cft-SNSTopic-AFEZ96WT3RZZ',
+    Message='Ares Instance Launched Successfully'
+)
+
 # Receive message from SQS queue
 response = sqs.receive_message(
     QueueUrl=queue_url,
