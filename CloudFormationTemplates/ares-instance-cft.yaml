@@ -1,8 +1,8 @@
 Resources:
-  AutoScalingGroup:
+  AutoScalingLaunchConfig:
     Type: "AWS::AutoScaling::LaunchConfiguration"
     Properties:
-      IamInstanceProfile: String # TODO: Create Iam Instance Profile
+      IamInstanceProfile: "arn:aws:iam::175722996601:instance-profile/SQS-S3-Role" 
       ImageId: String #required
       InstanceType: String #required
       LaunchConfigurationName: "Ares Launch Config"
@@ -11,19 +11,9 @@ Resources:
       - String
       SpotPrice: String
       UserData: String
-
-  IAMRole:
-    Type: "AWS::IAM::Role"
+  !LogicalID:
+    Type: "AWS::EC2::SpotFleet"
     Properties:
-      AssumeRolePolicyDocument: Json #required
-      Description: String
-      ManagedPolicyArns:
-      - String
-      MaxSessionDuration: Integer
-      Path: String
-      PermissionsBoundary: String
-      Policies:
-      - Policy
-      RoleName: String
-      Tags:
-      - Tag
+      SpotFleetRequestConfigData: #required
+        SpotFleetRequestConfigData
+  
