@@ -12,7 +12,7 @@ MessageAttr = {}
 def sendMessage(MessageAttributes):
     try:
         response = queue.send_message(
-            MessageBody = "A Give Hash",
+            MessageBody = "A Given Hash",
             MessageAttributes = MessageAttributes)
 
         http_code = response['ResponseMetadata']['HTTPStatusCode']
@@ -43,7 +43,7 @@ sendMessage(MessageAttr)
 
 while(True):
     try:
-        # TODO: change static names to ENVariables
+        # TODO: change static names to ENVariables                    vvvvv makes this your directory
         s3.meta.client.download_file('ares-hash-dump', 'results.txt', '/home/stefantjie/Ares/results.txt')
         print("success")
         break

@@ -27,7 +27,6 @@ attrs = message['MessageAttributes']
 
 os.system("sudo hashcat -m 0 -a 0 " + attrs['Hash']['StringValue'] + " /home/ubuntu/cracking/wordlists/rockstation.txt -o /home/ubuntu/results.txt")
 
-# choose message to receive
 print("os system is done")
 
 # upload completed file to s3
