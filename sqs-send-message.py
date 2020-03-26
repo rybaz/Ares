@@ -1,5 +1,6 @@
 import boto3
 import time
+import os
 
 sqs = boto3.resource('sqs')
 s3 = boto3.resource('s3')
@@ -18,7 +19,7 @@ def sendMessage(MessageAttributes):
         http_code = response['ResponseMetadata']['HTTPStatusCode']
 
         if (http_code == 200):
-            print("success!")
+            print("Successfully sent hash for cracking!")
         else:
             print("message failed")
 
@@ -45,9 +46,9 @@ while(True):
     try:
         # TODO: change static names to ENVariables                    vvvvv makes this your directory
         s3.meta.client.download_file('ares-hash-dump', 'results.txt', '/home/stefantjie/Ares/results.txt')
-        print("success")
+        print("Hash cracked! Plaintext saved to results.txt in " + os.getcwd())
         break
     except:
-        print("waiting...")
+        print("Waiting on Hashcat to finish...")
         time.sleep(15)
         continue
