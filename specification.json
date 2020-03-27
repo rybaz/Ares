@@ -1,10 +1,5 @@
 {
-    "Placement": {
-        "AvailabilityZone": "us-east-1c"
-    },
-    "KeyName": "p3.16xlkey",
-    "SecurityGroupIds": [ "sg-08b651e47c7b64dac" ],
-    "ImageId": "ami-03cfce4c556712fb5",
+    "ImageId": "ami-0119083ed26d352f7",
     "InstanceType": "p3.16xlarge",
     "IamInstanceProfile": {
         "Arn": "arn:aws:iam::175722996601:instance-profile/SQS-S3-Role"

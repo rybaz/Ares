@@ -70,4 +70,3 @@ ec2_terminate = ec2.terminate_instances(
     ],
     DryRun=False
 )
-

@@ -42,9 +42,9 @@ sendMessage(MessageAttr)
 
 print("Creating EC2 instance....")
 
-#os.system("bash spot-request-command.sh")
+os.system("bash spot-request-command.sh")
 
-#print("Instance created successfully...")
+print("Instance created successfully...")
 time.sleep(5)
 # Catch Cracked Password from S3
 
