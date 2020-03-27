@@ -27,4 +27,4 @@ a Python script.
 `sudo /bin/bash /home/ubuntu/cracking/drivers/NVIDIA-Linux-x86_64-410.72.run --ui=none --no-questions --silent -X && sudo nvidia-smi`
 
 ## Run receive script for cron at boot
-`@reboot python3 /home/ubuntu/sqs-receive-message.py &`
+`@reboot sudo python3 /home/ubuntu/sqs-receive-message.py &`
