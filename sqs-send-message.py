@@ -40,12 +40,19 @@ print(MessageAttr)
 
 sendMessage(MessageAttr)
 
-# Catch Crached Password from S3
+print("Creating EC2 instance....")
+
+os.system("bash spot-request-command.sh")
+
+print("Instance created successfully...")
+
+time.sleep(5)
+# Catch Cracked Password from S3
 
 while(True):
     try:
-        # TODO: change static names to ENVariables                    vvvvv makes this your directory
-        s3.meta.client.download_file('ares-hash-dump', 'results.txt', '/home/stefantjie/Ares/results.txt')
+        # TODO: change static names to ENVariables
+        s3.meta.client.download_file('ares-hash-dump', 'results.txt', os.getcwd() + '/results.txt')
         print("Hash cracked! Plaintext saved to results.txt in " + os.getcwd())
         break
     except:

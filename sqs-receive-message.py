@@ -1,9 +1,16 @@
 import boto3
 import os
+import requests
 
 sqs = boto3.client('sqs')
 s3 = boto3.resource('s3')
 sns = boto3.client('sns')
+ec2 = boto3.client('ec2')
+
+r = requests.get("http://169.254.169.254/latest/dynamic/instance-identity/document")
+response_json = r.json()
+region = response_json.get('region')
+instance_id = response_json.get('instanceId')
 
 queue_url = 'https://sqs.us-east-1.amazonaws.com/175722996601/ares-hash-queue'
 
@@ -53,4 +60,13 @@ snsNotification = sns.publish(
     # TODO: Change Static Names to ENVariables
     TopicArn='arn:aws:sns:us-east-1:175722996601:ares-setup-cft-SNSTopic-AFEZ96WT3RZZ',
     Message='Hashcat Executed Successfully'
+)
+
+# terminate instance
+
+ec2_terminate = ec2.terminate_instances(
+    InstanceIds=[
+        instance_id
+    ],
+    DryRun=False
 )

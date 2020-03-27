@@ -1,0 +1,7 @@
+{
+    "ImageId": "ami-0119083ed26d352f7",
+    "InstanceType": "p3.16xlarge",
+    "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::175722996601:instance-profile/SQS-S3-Role"
+    }
+  }
