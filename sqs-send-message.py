@@ -1,7 +1,6 @@
 import boto3
 import time
 import os
-from datetime import datetime
 
 sqs = boto3.resource('sqs')
 s3 = boto3.resource('s3')
@@ -52,7 +51,7 @@ time.sleep(5)
 
 while(True):
     try:
-        # TODO: change static names to ENVariables                    vvvvv makes this your directory
+        # TODO: change static names to ENVariables
         s3.meta.client.download_file('ares-hash-dump', 'results.txt', os.getcwd() + '/results.txt')
         print("Hash cracked! Plaintext saved to results.txt in " + os.getcwd())
         break
