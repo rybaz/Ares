@@ -18,7 +18,7 @@ def sendMessage(MessageAttributes):
         http_code = response['ResponseMetadata']['HTTPStatusCode']
 
         if (http_code == 200):
-            print("success!")
+            print("message sent successfully!")
         else:
             print("message failed")
 
