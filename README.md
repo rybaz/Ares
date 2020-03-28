@@ -17,7 +17,7 @@ a Python script.
 4. Our custom AMI
 
 ## Associated Projects
-* masker.py
+* [masker.py](https://github.com/r3s-ryan/masker)
 
 ## Necessary installations and configurations
 ## OS
