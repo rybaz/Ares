@@ -5,7 +5,7 @@
     },
     {
         "ParameterKey": "snsSubscription",
-        "ParameterValue": "johnthom@cock.li"
+        "ParameterValue": "INSERT-YOUR-EMAIL-HERE"
     },
     {
         "ParameterKey": "queueName",
