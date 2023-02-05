@@ -1,6 +1,7 @@
 <p align="center">
   <img width="400" height="400" src="jeff.png">
-  <figcaption>Midjourney prompt: "Jeff Bezos as Ares, the god of war"</figcaption>
+  <br>
+  <em>Midjourney prompt: "Jeff Bezos as Ares, the god of war"</em>
 </p>
 
 ---
