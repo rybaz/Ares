@@ -5,7 +5,7 @@
 </p>
 
 ---
-*****_Note: This is no longer maintained. We did this years ago and haven't touched it since. There is no guarantee that this will work, be safe, or not charge you exorbitant amounts of money by accident. USE AT YOUR OWN RISK._******
+*****_NOTE: This is no longer maintained. We did this years ago and haven't touched it since. There is no guarantee that this will work, be safe, or not charge you exorbitant amounts of money by accident. USE AT YOUR OWN RISK._*****
 
 # Ares
 High-impact, high-efficiency password cracking using GPUs in AWS. The best part? It's open-source.
