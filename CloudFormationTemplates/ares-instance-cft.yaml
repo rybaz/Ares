@@ -1,0 +1,19 @@
+Resources:
+  AutoScalingLaunchConfig:
+    Type: "AWS::AutoScaling::LaunchConfiguration"
+    Properties:
+      IamInstanceProfile: "<SQS_S3_ROLE_ARN>" 
+      ImageId: String #required
+      InstanceType: String #required
+      LaunchConfigurationName: "Ares Launch Config"
+      PlacementTenancy: default
+      SecurityGroups:
+      - String
+      SpotPrice: String
+      UserData: String
+  !LogicalID:
+    Type: "AWS::EC2::SpotFleet"
+    Properties:
+      SpotFleetRequestConfigData: #required
+        SpotFleetRequestConfigData
+  

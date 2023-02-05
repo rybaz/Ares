@@ -1,0 +1,7 @@
+{
+    "ImageId": "<AMI_ID>",
+    "InstanceType": "p3.16xlarge",
+    "IamInstanceProfile": {
+        "Arn": "<SQS_S3_ROLE_ARN>"
+    }
+  }

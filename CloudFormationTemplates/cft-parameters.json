@@ -1,0 +1,14 @@
+[
+    {
+      "ParameterKey": "paramBucketName",
+      "ParameterValue": "ares-hash-dump"
+    },
+    {
+        "ParameterKey": "snsSubscription",
+        "ParameterValue": "INSERT-YOUR-EMAIL-HERE"
+    },
+    {
+        "ParameterKey": "queueName",
+        "ParameterValue": "ares-hash-queue"
+    }
+]
