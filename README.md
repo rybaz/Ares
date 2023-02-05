@@ -8,6 +8,8 @@ _Note: This is no longer maintained. We did this years ago and haven't touched i
 # Ares
 High-impact, high-efficiency password cracking using GPUs in AWS. The best part? It's open-source.
 
+We presented this at BSides ATL 2020. View the demo here: [Demo](https://www.youtube.com/watch?v=5wx5UH3fODI)
+
 ## What does it do?
 The goal of this project was to create and easy and cost-efficient way to crack passwords using
 GPU-heavy EC2 instances. By using spot instances and Lambda/CDK, we can run all of this from
