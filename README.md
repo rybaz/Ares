@@ -1,6 +1,9 @@
 <p align="center">
-  <img width="400" height="318" src="https://www.storynory.com/wp-content/uploads/2017/02/xares-450.jpg.pagespeed.ic.1bEsYlQq-6.jpg">
+  <img width="400" height="318" src="jeff.png">
 </p>
+
+---
+_Note: This is no longer maintained. We did this years ago and haven't touched it since. There is no guarantee that this will work, be safe, or not charge you exorbitant amounts of money by accident. USE AT YOUR OWN RISK._
 
 # Ares
 High-impact, high-efficiency password cracking using GPUs in AWS. The best part? It's open-source.
